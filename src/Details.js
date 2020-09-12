@@ -9,9 +9,10 @@ class Details extends React.Component {
       .animal(this.props.id)
       .then(({ animal }) => {
         this.setState({
+          url: animal.url,
           name: animal.name,
           animal: animal.type,
-          location: `${animal.contact.address.city}, ${animal.contact.adress.state}`,
+          location: `${animal.contact.address.city}, ${animal.contact.address.state}`,
           description: animal.description,
           media: animal.photos,
           breed: animal.breeds.primary,
@@ -22,16 +23,16 @@ class Details extends React.Component {
   }
 
   render() {
-    if (this.state.loading) <h1>loading...</h1>;
-    const { animal, breed, location, description, name } = this.name;
+    if (this.state.loading) {
+      return <h1>loading...</h1>;
+    }
+    const { animal, breed, location, description, name } = this.state;
 
     return (
       <div className="details">
         <div>
           <h1>{name}</h1>
-          <h2>
-            `${animal} - ${breed} - ${location}`
-          </h2>
+          <h2>{`${animal} - ${breed} - ${location}`}</h2>
           <button>Adopt {name}</button>
           <p>{description}</p>
         </div>
