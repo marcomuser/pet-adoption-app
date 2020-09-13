@@ -110,4 +110,4 @@ module.exports=require("./impl"),module.exports.ANIMALS=require("./animals");
 },{"react":"n8MK","@frontendmasters/pet":"OpLS"}],"lY9v":[function(require,module,exports) {
 "use strict";var e=u(require("react")),t=u(require("react-dom")),r=require("@reach/router"),l=u(require("./SearchParams")),a=u(require("./Details"));function u(e){return e&&e.__esModule?e:{default:e}}var d=function(){return e.default.createElement(e.default.StrictMode,null,e.default.createElement("div",null,e.default.createElement("header",null,e.default.createElement(r.Link,{to:"/"},"Adopt me!")),e.default.createElement(r.Router,null,e.default.createElement(l.default,{path:"/"}),e.default.createElement(a.default,{path:"/details/:id"}))))};t.default.render(e.default.createElement(d,null),document.getElementById("root"));
 },{"react":"n8MK","react-dom":"NKHc","@reach/router":"VJZj","./SearchParams":"oLoL","./Details":"XGSj"}]},{},["lY9v"], null)
-//# sourceMappingURL=/pet-adoption-app/App.66ec17d7.js.map
+//# sourceMappingURL=/App.66ec17d7.js.map
